@@ -21,24 +21,26 @@ public class EventManager {
                 LocalDate.of(2025, 9, 16), "This is a restricted event. Need to sort out publication date",
                 EventType.PRIVATE,
                 8);
+
         Event sansaWedding = new Event(
                 "Sansa Stark from Winterfell is marrying Ramsey Bolton",
                 LocalDate.of(2025, 8, 23),
                 "Long live Lord Ramsey! Protector of the North!",
                 EventType.PUBLIC, 200);
+
         Event dragonHatchingFestival = new Event(
                 "Festival of the Hatching - Daenerys' Dragons",
                 LocalDate.of(2025, 12, 3),
                 "Celebrate the miracle of fire and blood. No real dragons, we promise.",
                 EventType.PUBLIC,
                 500);
+        
         Event smallCouncilMeeting = new Event(
                 "Small Council Closed Meeting",
                 LocalDate.of(2025, 7, 10),
                 "Matters of the Realm. Strictly confidential.",
                 EventType.PRIVATE,
-                10
-        );
+                10);
 
         ed.save(bookConference);
         ed.save(sansaWedding);
