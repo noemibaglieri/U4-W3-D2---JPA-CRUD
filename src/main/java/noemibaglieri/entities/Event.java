@@ -12,18 +12,20 @@ public class Event {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(nullable = false)
     private String title;
 
-    @Column(name = "event_date")
+    @Column(name = "event_date", nullable = false)
     private LocalDate eventDate;
 
+    @Column(nullable = false)
     private String description;
 
-    @Column(name = "event_type")
+    @Column(name = "event_type", nullable = false)
     @Enumerated(EnumType.STRING)
     private EventType eventType;
 
-    @Column(name = "max_participants")
+    @Column(name = "max_participants", nullable = false)
     private int maxParticipants;
 
     public Event() {}
